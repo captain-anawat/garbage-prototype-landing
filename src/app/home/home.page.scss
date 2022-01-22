@@ -23,7 +23,8 @@
     text-decoration: none;
 }
 
-ion-list ion-card {
+ion-card {
     display: inline-block;
-    width: 44%;
+    width: 50% !important;
+    height: 300px !important;
 }

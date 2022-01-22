@@ -1,29 +1,34 @@
 <ion-header class="ion-no-border" mode="md">
-    <ion-card href="https://play.google.com/store/apps/details?id=thes.mana.client">
-        <ion-item lines="none" color="light">
-            <ion-icon slot="start" color="danger" name="phone-portrait-outline"></ion-icon>
-            <ion-label>
-                <h2>Download mana app</h2>
+    <ion-item class="ion-margin" lines="none" color="tertiary"
+        href="https://play.google.com/store/apps/details?id=thes.mana.client">
+        <ion-icon slot="start" color="danger" name="phone-portrait-outline"></ion-icon>
+        <ion-label>
+            <h2><b>Download mana app</b></h2>
+            <ion-label color="medium">
                 <h3>Play store, App store</h3>
             </ion-label>
-        </ion-item>
-    </ion-card>
-</ion-header>
-
-<ion-content mode="md">
-    <ion-item lines="none" color="light" class="ion-text-center">
-        <ion-label>
-            <ion-label>QR mana promptpay</ion-label>
-            <img src="assets/imgs/qr.png" routerLink="/payment-result">
-            <ion-label>จำนวนเงิน</ion-label>
-            <ion-label color="danger">50.00 THB</ion-label>
         </ion-label>
     </ion-item>
-    <ion-item lines="none" color="light">
-        <ion-note>สแกน QR นี้เพื่อจ่ายเงินหรือกดบันทึกรูปเพื่อนำ QR ไปใช้ยัง Mobile banking</ion-note>
-    </ion-item>
+</ion-header>
+
+<ion-content>
+    <ion-list lines="none">
+        <ion-item color="tertiary" class="ion-text-center">
+            <ion-label>
+                <ion-label>QR mana promptpay</ion-label>
+                <img src="assets/imgs/qr.png" routerLink="/payment-result">
+                <ion-label>จำนวนเงิน</ion-label>
+                <ion-label color="danger">
+                    <h1><b>50.00 <small>THB</small></b></h1>
+                </ion-label>
+            </ion-label>
+        </ion-item>
+        <ion-item color="tertiary" class="ion-text-center">
+            <p>สแกน QR นี้เพื่อจ่ายเงินหรือกดบันทึกรูปเพื่อนำ QR ไปใช้ยัง Mobile banking</p>
+        </ion-item>
+    </ion-list>
 </ion-content>
+
 <ion-footer>
-    <ion-button color="danger" expand="full" type="submit">บันทึกรููป
-    </ion-button>
+    <ion-button color="danger" class="ion-no-margin" expand="full" type="submit">บันทึกรููป</ion-button>
 </ion-footer>

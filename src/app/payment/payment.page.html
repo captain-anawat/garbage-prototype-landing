@@ -1,145 +1,201 @@
 <ion-header class="ion-no-border" mode="md">
-    <ion-card href="https://play.google.com/store/apps/details?id=thes.mana.client">
-        <ion-item lines="none" color="light">
-            <ion-icon slot="start" color="danger" name="phone-portrait-outline"></ion-icon>
-            <ion-label>
-                <h2>Download mana app</h2>
+    <ion-item class="ion-margin" lines="none" color="tertiary"
+        href="https://play.google.com/store/apps/details?id=thes.mana.client">
+        <ion-icon slot="start" color="danger" name="phone-portrait-outline"></ion-icon>
+        <ion-label>
+            <h2><b>Download mana app</b></h2>
+            <ion-label color="medium">
                 <h3>Play store, App store</h3>
             </ion-label>
-        </ion-item>
-    </ion-card>
+        </ion-label>
+    </ion-item>
 </ion-header>
 
-<ion-content mode="md">
-    <ion-list lines="none">
-        <ion-item color="light">
-            <ion-avatar slot="start">
-                <img src="assets/imgs/defaultshop.png" />
+<ion-content>
+
+    <ion-list class="ion-no-padding" lines="none">
+        <ion-item color="tertiary" class="ion-padding-bottom">
+            <ion-avatar slot="start" class="avatar-m">
+                <img src="assets/imgs/defaultshop.png">
             </ion-avatar>
             <ion-label>
-                <h2>Shop Name</h2>
+                <h2><b>เทศบาลนครขอนแก่น</b></h2>
             </ion-label>
-            <ion-button color="danger" routerLink="/home">
-                <ion-icon name="add-outline" slot="start"></ion-icon>เพิ่มสินค้า</ion-button>
+            <ion-button class="no-shadow ion-no-margin" mode="md" color="danger" size="small" shape="round" slot="end"
+                routerLink="/home">
+                <ion-label class="ion-margin">
+                    + เพิ่มสินค้า
+                </ion-label>
+            </ion-button>
         </ion-item>
-    </ion-list>
-    <ion-list lines="none">
-        <ion-card-content class="ion-no-padding">
-            <ion-item color="light" lines="none">
-                <ion-grid>
-                    <ion-row>
-                        <ion-col class="ion-no-padding">
-                            <ion-label>
-                                <h3 class="line-height2"><b>รายละเอียดการจ่ายเงิน</b></h3>
-                            </ion-label>
-                        </ion-col>
-                    </ion-row>
-                    <ion-row>
-                        <ion-col class="ion-no-padding">
-                            <ion-label color="medium">
-                                <h3 class="line-height2">รวมค่าสินค้า</h3>
-                            </ion-label>
-                        </ion-col>
-                        <ion-col class="ion-no-padding ion-text-right">
-                            <ion-label color="medium">
-                                <h3>50.00
-                                    <small>THB</small>
-                                </h3>
-                            </ion-label>
-                        </ion-col>
-                    </ion-row>
-                    <ion-row>
-                        <ion-col class="ion-no-padding">
-                            <ion-label color="medium">
-                                <h3 class="line-height2">ค่าจัดส่ง</h3>
-                            </ion-label>
-                        </ion-col>
-                        <ion-col class="ion-no-padding ion-text-right">
-                            <ion-label color="medium">
-                                <h3>0.00
-                                    <small>THB</small>
-                                </h3>
-                            </ion-label>
-                        </ion-col>
-                    </ion-row>
-                    <ion-row>
-                        <ion-col class="ion-no-padding">
-                            <ion-label color="medium">
-                                <h3 class="line-height2">ราคารวมทั้งหมด</h3>
-                            </ion-label>
-                        </ion-col>
-                        <ion-col class="ion-no-padding ion-text-right">
-                            <ion-text color="danger">
+
+        <ion-card color="tertiary">
+            <ion-card-content class="ion-no-padding">
+                <ion-item class="ion-no-padding" color="tertiary" lines="full">
+                    <ion-grid class="ion-padding">
+                        <ion-row>
+                            <ion-col class="ion-no-padding">
                                 <ion-label>
-                                    <h3>
-                                        <b>50.00
-                    <small>THB</small></b>
+                                    <h3 class="line-height2"><b>รายละเอียดการจ่ายเงิน</b></h3>
+                                </ion-label>
+                            </ion-col>
+                        </ion-row>
+                        <ion-row>
+                            <ion-col class="ion-no-padding">
+                                <ion-label color="medium">
+                                    <h3 class="line-height2">รวมค่าสินค้า</h3>
+                                </ion-label>
+                            </ion-col>
+                            <ion-col class="ion-no-padding ion-text-right">
+                                <ion-label color="medium">
+                                    <h3>50.00
+                                        <small>THB</small>
                                     </h3>
                                 </ion-label>
-                            </ion-text>
-                        </ion-col>
-                    </ion-row>
-                </ion-grid>
-            </ion-item>
-        </ion-card-content>
+                            </ion-col>
+                        </ion-row>
+                        <ion-row>
+                            <ion-col class="ion-no-padding">
+                                <ion-label color="medium">
+                                    <h3 class="line-height2">ค่าจัดส่ง</h3>
+                                </ion-label>
+                            </ion-col>
+                            <ion-col class="ion-no-padding ion-text-right">
+                                <ion-label color="medium">
+                                    <h3>00.00
+                                        <small>THB</small>
+                                    </h3>
+                                </ion-label>
+                            </ion-col>
+                        </ion-row>
+                        <ion-row>
+                            <ion-col class="ion-no-padding">
+                                <ion-label color="medium">
+                                    <h3 class="line-height2">ราคารวมทั้งหมด</h3>
+                                </ion-label>
+                            </ion-col>
+                            <ion-col class="ion-no-padding ion-text-right">
+                                <ion-text color="danger">
+                                    <ion-label>
+                                        <h3>
+                                            <b>50.00
+                                                <small>THB</small></b>
+                                        </h3>
+                                    </ion-label>
+                                </ion-text>
+                            </ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </ion-item>
+
+            </ion-card-content>
+        </ion-card>
     </ion-list>
-    <ion-list lines="full">
-        <ion-item class="ion-no-padding" color="light" lines="none">
+
+    <ion-list class="ion-no-padding" lines="full">
+        <ion-item class="ion-no-padding" color="tertiary" lines="none">
             <ion-label class="ion-padding-start">
-                <h3><b>รายการที่สั่ง (1 รายการ)</b></h3>
+                <h3><b>รายการรับชำระเงิน (1 รายการ)</b></h3>
             </ion-label>
         </ion-item>
-        <ion-item color="light">
-            <ion-thumbnail slot="start">
-                <img src="assets/imgs/dffoods.png">
-            </ion-thumbnail>
-            <ion-label>
-                <h2>แสงศิริ 172/6</h2>
-                <h3>
-                    <ion-text color="danger">Detail 1, Detail 2</ion-text>
-                </h3>
-            </ion-label>
-            <ion-label slot="end" class="ion-text-right">
-                <h3 class="ion-text-right">
-                    <s style="color:'red'"><ion-text color="dark">
-            0.00</ion-text>
-          <small style="color:'black'">&nbsp;THB</small></s>
-                </h3>
-                <h3 class="ion-text-right">
-                    <ion-text color="dark" Class="line-through">
-                        50.00</ion-text>
-                    <small>&nbsp;THB</small>
-                </h3>
-            </ion-label>
+
+        <ion-item color="tertiary" class="ion-no-padding">
+            <ion-grid class="ion-no-padding text-hidden">
+
+                <ion-row class="ion-no-padding ion-align-items-center ion-padding-top">
+                    <ion-col justify-content-center align-items-center class="ion-no-padding " size="auto"
+                        class="ion-text-center ion-padding-start">
+                        <img class="logo-l" src="assets/imgs/piman.png">
+                    </ion-col>
+
+                    <ion-col class="ion-padding-start">
+                        <ion-row>
+                            <ion-col size="6">
+                                <ion-label>
+                                    <h3>พิมานคอนโดปาร์ค</h3>
+                                </ion-label>
+                            </ion-col>
+                            <ion-col size="6">
+                                <ion-label>
+                                    <h3 class="ion-text-right">
+                                        <ion-text color="danger" class="line-through">
+                                            00.00</ion-text>
+                                        <small>&nbsp;THB</small>
+                                    </h3>
+                                </ion-label>
+                            </ion-col>
+                        </ion-row>
+
+                        <ion-row>
+                            <ion-col size="6">
+                                <ion-label color="danger">
+                                    <h3>989/27 ตำบล ศิลา อำเภอเมืองขอนแก่น 40000</h3>
+                                </ion-label>
+                            </ion-col>
+                            <ion-col size="6">
+                                <ion-label>
+                                    <h3 class="ion-text-right">
+                                        <ion-text>
+                                            50.00
+                                            <small>THB</small>
+                                        </ion-text>
+                                    </h3>
+                                </ion-label>
+                            </ion-col>
+                        </ion-row>
+
+                        <ion-label color="medium" class="ion-no-padding ion-text-right">
+                            <h3>
+                                <span>ลบ</span>
+                            </h3>
+                        </ion-label>
+
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
         </ion-item>
     </ion-list>
-    <ion-list lines="none">
-        <ion-card-content class="ion-no-padding">
-            <ion-radio-group value="payment">
-                <ion-item color="light" lines="none">
+
+    <ion-card color="tertiary" class="ion-no-padding border-radius">
+        <ion-list class="ion-margin-bottom" lines="none">
+            <ion-list-header mode="md" color="tertiary">
+                <ion-label>
+                    <h3>วิธีการชำระเงิน</h3>
+                </ion-label>
+            </ion-list-header>
+            <ion-radio-group mode="md">
+                <ion-item color="tertiary">
+                    <ion-radio slot="start" value="manaapp"></ion-radio>
                     <ion-label>
-                        <h2>วิธีการชำระเงิน</h2>
+                        <b>mana app</b>
+                        <ion-text color="medium">
+                            (ฟรีค่าธรรมเนียม)
+                        </ion-text>
                     </ion-label>
                 </ion-item>
-                <ion-item color="light" lines="none">
-                    <ion-label>mana app</ion-label>
-                    <ion-radio slot="start" value="manaapp"></ion-radio>
-                </ion-item>
-
-                <ion-item color="light" lines="none">
-                    <ion-label>Promptpay</ion-label>
+                <ion-item color="tertiary">
                     <ion-radio slot="start" value="promptpay"></ion-radio>
+                    <ion-label>
+                        <b>Promptpay</b>
+                        <ion-text color="medium">
+                            (ค่าธรรมเนียม 15 <small>THB</small>)
+                        </ion-text>
+                    </ion-label>
                 </ion-item>
-
-                <ion-item color="light" lines="none">
-                    <ion-label>บัตรเครดิต</ion-label>
+                <ion-item color="tertiary">
                     <ion-radio slot="start" value="card" disabled></ion-radio>
+                    <ion-label>
+                        <b>บัตรเครดิต</b>
+                        <ion-text color="medium">
+                            (ค่าธรรมเนียม 20 <small>THB</small>)
+                        </ion-text>
+                    </ion-label>
                 </ion-item>
             </ion-radio-group>
-        </ion-card-content>
-    </ion-list>
+        </ion-list>
+    </ion-card>
+
 </ion-content>
 <ion-footer>
-    <ion-button color="danger" expand="full" routerLink="/payment-qr">สั่งสินค้า
-    </ion-button>
+    <ion-button color="danger" class="ion-no-margin" expand="full" routerLink="/payment-qr">สั่งสินค้า</ion-button>
 </ion-footer>
