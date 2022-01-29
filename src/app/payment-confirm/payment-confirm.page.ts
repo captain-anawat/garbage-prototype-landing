@@ -13,7 +13,7 @@ export class PaymentConfirmPage implements OnInit {
   ngOnInit() {
   }
   onSubmit() {
-    let param: NavigationExtras = { queryParams: { cost: "70" } };
+    let param: NavigationExtras = { queryParams: { cost: "65" } };
     this.router.navigate(['/payment-qr'], param);
   }
 
