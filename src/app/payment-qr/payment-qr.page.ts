@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-payment-qr',
@@ -7,7 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaymentQRPage implements OnInit {
 
-  constructor() { }
+  public cost: number = 50;
+
+  constructor(private route: ActivatedRoute) {
+    if (this.route.queryParams) {
+      this.route.queryParams.subscribe(params => {
+        let value = params["cost"];
+        if (value) {
+          this.cost = value;
+        }
+      });
+    }
+  }
 
   ngOnInit() {
   }
