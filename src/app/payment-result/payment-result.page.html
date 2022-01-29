@@ -3,7 +3,7 @@
         href="https://play.google.com/store/apps/details?id=thes.mana.client">
         <ion-icon slot="start" color="danger" name="phone-portrait-outline"></ion-icon>
         <ion-label>
-            <h2><b>Download mana app</b></h2>
+            <h2><b>Open in Mana</b></h2>
             <ion-label color="medium">
                 <h3>Play store, App store</h3>
             </ion-label>
@@ -13,13 +13,17 @@
 
 <ion-content class="ion-text-center">
     <ion-list lines="none" style="background-color: #ffffff; padding: 50px 0px;">
-        <ion-item color="tertiary" class="ion-text-center">
+        <ion-card color="tertiary" class="ion-text-center">
+            <ion-avatar color="tertiary" class="avatar-l center ion-margin-top ion-margin-bottom">
+                <img src="assets/imgs/correctblue.png" />
+            </ion-avatar>
             <ion-label>
-                <img height="48px" src="assets/imgs/correctblue.png">
-                <ion-label class="ion-margin-bottom">จ่ายเงินสำเร็จ</ion-label>
-                <ion-label><small><u>ดูบิลจ่ายเงิน</u></small></ion-label>
+              <h2>จ่ายเงินสำเร็จ</h2>
             </ion-label>
-        </ion-item>
+        </ion-card>
+        <ion-card color="tertiary" class="ion-text-center">
+            <ion-button fill="clear" shape="round" size="default">ดูบิลจ่ายเงิน</ion-button>
+        </ion-card>
     </ion-list>
     <ion-item lines="none"></ion-item>
     <ion-card-content class="ion-no-padding">

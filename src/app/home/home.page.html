@@ -3,7 +3,7 @@
         href="https://play.google.com/store/apps/details?id=thes.mana.client">
         <ion-icon slot="start" color="danger" name="phone-portrait-outline"></ion-icon>
         <ion-label>
-            <h2><b>Download mana app</b></h2>
+            <h2><b>Open in Mana</b></h2>
             <ion-label color="medium">
                 <h3>Play store, App store</h3>
             </ion-label>
@@ -26,7 +26,8 @@
             </ion-label>
         </ion-item>
         <ion-item color="tertiary">
-            <ion-note>จำนวนผู้ใช้บริการ : 200 คน | ความนิยม :
+            <ion-note>
+                จำนวนผู้ใช้บริการ : 200 คน | ความนิยม :
                 <ion-icon name="star" color="danger"></ion-icon>
                 <ion-icon name="star" color="danger"></ion-icon>
                 <ion-icon name="star" color="danger"></ion-icon>
@@ -46,74 +47,88 @@
             <ion-searchbar animated placeholder="ค้นหาจากบ้านเลขที่"></ion-searchbar>
         </ion-item>
 
-        <ion-card routerLink="/payment-add-to-cart" color="tertiary">
-            <ion-card-content>
-                <img src="assets/imgs/piman.png">
-                <ion-label>
-                    <h2>พิมานคอนโดปาร์ค</h2>
-                    <h3>
-                        <ion-text color="danger">989/27 ตำบล ศิลา อำเภอเมืองขอนแก่น 40000</ion-text>
-                    </h3>
-                </ion-label>
-            </ion-card-content>
-        </ion-card>
-        <ion-card routerLink="/payment-add-to-cart" color="tertiary">
-            <ion-card-content>
-                <img src="assets/imgs/sansiri.png">
-                <ion-label>
-                    <h2>แสนสิริ</h2>
-                    <h3>
-                        <ion-text color="danger">116/13 ตำบล ขามใหญ่ อำเภอเมืองอุบลราชธานี 34000</ion-text>
-                    </h3>
-                </ion-label>
-            </ion-card-content>
-        </ion-card>
-        <ion-card routerLink="/payment-add-to-cart" color="tertiary">
-            <ion-card-content>
-                <img src="assets/imgs/godenneo.png">
-                <ion-label>
-                    <h2>โกลเด้นนีโอ</h2>
-                    <h3>
-                        <ion-text color="danger">112/73 ตำบลในเมือง อำเภอเมืองขอนแก่น 40000</ion-text>
-                    </h3>
-                </ion-label>
-            </ion-card-content>
-        </ion-card>
-        <ion-card routerLink="/payment-add-to-cart" color="tertiary">
-            <ion-card-content>
-                <img src="assets/imgs/apital.png">
-                <ion-label>
-                    <h2>อภิทาวน์</h2>
-                    <h3>
-                        <ion-text color="danger">7/40 ตำบลศิลา อำเภอเมืองขอนแก่น 40000</ion-text>
-                    </h3>
-                </ion-label>
-            </ion-card-content>
-        </ion-card>
-        <ion-card routerLink="/payment-add-to-cart" color="tertiary">
-            <ion-card-content>
-                <img src="assets/imgs/prugsa.png">
-                <ion-label>
-                    <h2>พฤกษาแอร์พอร์ต</h2>
-                    <h3>
-                        <ion-text color="danger">1/17 ตำบลศิลา อำเภอเมืองขอนแก่น 40000</ion-text>
-                    </h3>
-                </ion-label>
-            </ion-card-content>
-        </ion-card>
-        <ion-card routerLink="/payment-add-to-cart" color="tertiary">
-            <ion-card-content>
-                <img src="assets/imgs/prugsa.png">
-                <ion-label>
-                    <h2>พฤกษาแอร์พอร์ต</h2>
-                    <h3>
-                        <ion-text color="danger">2/17 ตำบลศิลา อำเภอเมืองขอนแก่น 40000</ion-text>
-                    </h3>
-                </ion-label>
-            </ion-card-content>
-        </ion-card>
+        <ion-row>
+            <ion-col size-xs="6" size-md="2">
+                <ion-card routerLink="/payment-add-to-cart" color="tertiary" class="ion-text-center">
+                    <ion-card-content>
+                        <img src="assets/imgs/defaultshop.png">
+                        <ion-label>
+                            <h2>พิมานคอนโดปาร์ค</h2>
+                            <h3>
+                                <ion-text color="danger">989/27 ตำบล ศิลา อำเภอเมืองขอนแก่น 40000</ion-text>
+                            </h3>
+                        </ion-label>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+            <ion-col size-xs="6" size-md="2">
+                <ion-card routerLink="/payment-add-to-cart" color="tertiary" class="ion-text-center">
+                    <ion-card-content>
+                        <img src="assets/imgs/defaultshop.png">
+                        <ion-label>
+                            <h2>แสนสิริ</h2>
+                            <h3>
+                                <ion-text color="danger">116/13 ตำบล ขามใหญ่ อำเภอเมืองอุบลราชธานี 34000</ion-text>
+                            </h3>
+                        </ion-label>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+            <ion-col size-xs="6" size-md="2">
+                <ion-card routerLink="/payment-add-to-cart" color="tertiary" class="ion-text-center">
+                    <ion-card-content>
+                        <img src="assets/imgs/defaultshop.png">
+                        <ion-label>
+                            <h2>โกลเด้นนีโอ</h2>
+                            <h3>
+                                <ion-text color="danger">112/73 ตำบลในเมือง อำเภอเมืองขอนแก่น 40000</ion-text>
+                            </h3>
+                        </ion-label>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+            <ion-col size-xs="6" size-md="2">
+                <ion-card routerLink="/payment-add-to-cart" color="tertiary" class="ion-text-center">
+                    <ion-card-content>
+                        <img src="assets/imgs/defaultshop.png">
+                        <ion-label>
+                            <h2>อภิทาวน์</h2>
+                            <h3>
+                                <ion-text color="danger">7/40 ตำบลศิลา อำเภอเมืองขอนแก่น 40000</ion-text>
+                            </h3>
+                        </ion-label>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+            <ion-col size-xs="6" size-md="2">
+                <ion-card routerLink="/payment-add-to-cart" color="tertiary" class="ion-text-center">
+                    <ion-card-content>
+                        <img src="assets/imgs/defaultshop.png">
+                        <ion-label>
+                            <h2>พฤกษาแอร์พอร์ต</h2>
+                            <h3>
+                                <ion-text color="danger">1/17 ตำบลศิลา อำเภอเมืองขอนแก่น 40000</ion-text>
+                            </h3>
+                        </ion-label>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+            <ion-col size-xs="6" size-md="2">
+                <ion-card routerLink="/payment-add-to-cart" color="tertiary" class="ion-text-center">
+                    <ion-card-content>
+                        <img src="assets/imgs/defaultshop.png">
+                        <ion-label>
+                            <h2>พฤกษาแอร์พอร์ต</h2>
+                            <h3>
+                                <ion-text color="danger">2/17 ตำบลศิลา อำเภอเมืองขอนแก่น 40000</ion-text>
+                            </h3>
+                        </ion-label>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+        </ion-row>
 
-        <ion-item class="ion-text-center ion-no-margin" color="tertiary" lines="none">
+        <ion-item class="ion-text-center ion-no-margin" lines="none">
             <ion-label color="primary">See More</ion-label>
         </ion-item>
     </ion-list>
