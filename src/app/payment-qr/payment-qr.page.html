@@ -3,7 +3,7 @@
         href="https://play.google.com/store/apps/details?id=thes.mana.client">
         <ion-icon slot="start" color="danger" name="phone-portrait-outline"></ion-icon>
         <ion-label>
-            <h2><b>Download mana app</b></h2>
+            <h2><b>Open in Mana</b></h2>
             <ion-label color="medium">
                 <h3>Play store, App store</h3>
             </ion-label>
@@ -21,14 +21,28 @@
                 <ion-label color="danger">
                     <h1><b>50.00 <small>THB</small></b></h1>
                 </ion-label>
+                <ion-text color="danger">
+                    <p>*ชำระด้วย mana app เหลือ 40 บาท</p>
+                </ion-text>
             </ion-label>
         </ion-item>
-        <ion-item color="tertiary" class="ion-text-center">
+        <ion-card color="tertiary" class="ion-text-center">
+            <ion-button fill="clear" shape="round" size="default">
+                <ion-icon name="download-outline"></ion-icon>
+                <ion-text class="ion-padding-start">
+                    บันทึกรูป
+                </ion-text>
+            </ion-button>
+            <ion-button fill="clear" shape="round" size="default">
+                <ion-icon name="share-outline"></ion-icon>
+                <ion-text class="ion-padding-start">
+                    แชร์
+                </ion-text>
+            </ion-button>
+        </ion-card>
+        <ion-card color="tertiary" class="ion-padding ion-text-center">
             <p>สแกน QR นี้เพื่อจ่ายเงินหรือกดบันทึกรูปเพื่อนำ QR ไปใช้ยัง Mobile banking</p>
-        </ion-item>
+        </ion-card>
     </ion-list>
-</ion-content>
 
-<ion-footer>
-    <ion-button color="danger" class="ion-no-margin" expand="full" type="submit">บันทึกรููป</ion-button>
-</ion-footer>
+</ion-content>

@@ -26,6 +26,10 @@ const routes: Routes = [
     path: 'payment-add-to-cart',
     loadChildren: () => import('./payment-add-to-cart/payment-add-to-cart.module').then( m => m.PaymentAddToCartPageModule)
   },
+  {
+    path: 'payment-confirm',
+    loadChildren: () => import('./payment-confirm/payment-confirm.module').then( m => m.PaymentConfirmPageModule)
+  },
 
 ];
 
