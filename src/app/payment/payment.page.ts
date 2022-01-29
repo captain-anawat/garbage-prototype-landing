@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { NavigationExtras, Router } from '@angular/router';
 
 @Component({
   selector: 'app-payment',
@@ -8,18 +7,8 @@ import { NavigationExtras, Router } from '@angular/router';
 })
 export class PaymentPage implements OnInit {
 
-  private paymentMethod: string = "/payment-qr";
-
-  constructor(private router: Router) { }
+  constructor() { }
 
   ngOnInit() {
-  }
-
-  onSelectManaApp() { this.paymentMethod = "/payment-qr"; }
-  onSelectPromptPay() { this.paymentMethod = "/payment-confirm"; }
-
-  onSubmit() {
-    let param: NavigationExtras = { queryParams: { cost: "50" } };
-    this.router.navigate([this.paymentMethod], param);
   }
 }
