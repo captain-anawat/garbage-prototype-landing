@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Share } from '@capacitor/share';
 import * as htmlToImage from 'html-to-image';
 
@@ -9,7 +10,17 @@ import * as htmlToImage from 'html-to-image';
 })
 export class PaymentQRPage implements OnInit {
 
-  constructor() { }
+  public amount: number;
+  constructor(private route: ActivatedRoute) {
+    if (this.route.queryParams) {
+      this.route.queryParams.subscribe(params => {
+        let value = params["amount"];
+        if (value) {
+          this.amount = value;
+        }
+      });
+    }
+  }
 
   ngOnInit() {
   }
@@ -44,7 +55,7 @@ export class PaymentQRPage implements OnInit {
         await Share.share({
           title: 'See cool stuff',
           text: 'Really awesome thing you need to see right meow',
-          url: 'https://prototype-landing.azurewebsites.net/#/payment-qr',
+          url: `https://prototype-landing.azurewebsites.net/#/payment-qr?amount=${this.amount}`,
           dialogTitle: 'Share with buddies',
         });
 
