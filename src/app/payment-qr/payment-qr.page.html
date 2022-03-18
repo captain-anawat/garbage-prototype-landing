@@ -16,7 +16,8 @@
         <ion-item color="tertiary" class="ion-text-center" id="payment-qr-content">
             <ion-label>
                 <ion-label><b>QR mana promptpay</b></ion-label>
-                <img src="https://xqrapi-deva.onmana.space/api/QRManager/url?url=s.manal.ink/np/ntrhalk-295788714393704&scheme=https" routerLink="/payment-result">
+                <img *ngIf="amount <= 50" src="https://manadevmaster.blob.core.windows.net/images/url.png" routerLink="/payment-result">
+                <img *ngIf="amount > 50" src="https://manadevmaster.blob.core.windows.net/ppayqr/01b595c7-2181-4708-b405-4c99e82bf76a.png" routerLink="/payment-result">
                 <ion-label>จำนวนเงิน</ion-label>
                 <ion-label color="danger">
                     <h1><b>{{ amount }}.00 <small>THB</small></b></h1>
