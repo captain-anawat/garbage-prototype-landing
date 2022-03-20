@@ -1,6 +1,5 @@
 <ion-header class="ion-no-border" mode="md">
-    <ion-item class="ion-margin" lines="none" color="tertiary"
-        href="manadeva://xmunilink-deva.onmana.space/np/ntrhalk-295788714393704">
+    <ion-item class="ion-margin" lines="none" color="tertiary" [href]="applink">
         <ion-icon slot="start" color="danger" name="phone-portrait-outline"></ion-icon>
         <ion-label>
             <h2><b>Open in Mana</b></h2>
@@ -16,13 +15,12 @@
         <ion-item color="tertiary" class="ion-text-center" id="payment-qr-content">
             <ion-label>
                 <ion-label><b>QR mana promptpay</b></ion-label>
-                <img *ngIf="amount <= 50" src="https://manadevmaster.blob.core.windows.net/images/url.png" routerLink="/payment-result">
-                <img *ngIf="amount > 50" src="https://manadevmaster.blob.core.windows.net/ppayqr/01b595c7-2181-4708-b405-4c99e82bf76a.png" routerLink="/payment-result">
+                <img [src]="data.paymentQRUrl" routerLink="/payment-result">
                 <ion-label>จำนวนเงิน</ion-label>
                 <ion-label color="danger">
-                    <h1><b>{{ amount }}.00 <small>THB</small></b></h1>
+                    <h1><b>{{ data.amount }}.00 <small>THB</small></b></h1>
                 </ion-label>
-                <ion-label *ngIf="amount > 50">(จ่ายด้วย mana เหลือ 50 <small>THB</small>)</ion-label>
+                <ion-label *ngIf="data.paymentType == 'promptpay'">(จ่ายด้วย mana เหลือ 50 <small>THB</small>)</ion-label>
             </ion-label>
         </ion-item>
         <ion-card color="tertiary" class="ion-text-center">

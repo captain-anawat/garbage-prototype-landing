@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/services/data.service';
 
 @Component({
   selector: 'app-payment-add-to-cart',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaymentAddToCartPage implements OnInit {
 
-  constructor() { }
+  public applink: string;
+  
+  constructor(private svc: DataService) {
+    this.applink = svc.applink + "/np/ntrhalk-nomember";
+  }
 
   ngOnInit() {
   }

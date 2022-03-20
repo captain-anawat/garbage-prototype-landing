@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { NavigationExtras, Router } from '@angular/router';
+import { DataService } from 'src/services/data.service';
 
 @Component({
   selector: 'app-payment',
@@ -9,10 +10,11 @@ import { NavigationExtras, Router } from '@angular/router';
 })
 export class PaymentPage implements OnInit {
 
-
+  public applink: string;
   public fg: FormGroup;
 
-  constructor(private fb: FormBuilder, private route: Router) {
+  constructor(private fb: FormBuilder, private route: Router, private svc: DataService) {
+    this.applink = svc.applink + "/np/ntrhalk-edit";
 
     this.fg = this.fb.group({
       'paymentType': "manaapp",
@@ -25,8 +27,7 @@ export class PaymentPage implements OnInit {
 
   onSubmit() {
     if (this.fg.valid) {
-      let amount = this.fg.get("paymentType").value == "manaapp" ? 50 : 65;
-      let param: NavigationExtras = { queryParams: { amount: amount } };
+      let param: NavigationExtras = { queryParams: { paymentType: this.fg.get("paymentType").value } };
       this.route.navigate(["/payment-qr"], param);
     }
   }

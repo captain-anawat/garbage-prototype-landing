@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Share } from '@capacitor/share';
 import * as htmlToImage from 'html-to-image';
+import { DataService } from 'src/services/data.service';
 
 @Component({
   selector: 'app-payment-qr',
@@ -10,13 +11,30 @@ import * as htmlToImage from 'html-to-image';
 })
 export class PaymentQRPage implements OnInit {
 
-  public amount: number;
-  constructor(private route: ActivatedRoute) {
+  public applink: string;
+  public data: any = { paymentType: "", paymentQRUrl: "", amount: 0 };
+
+  constructor(private route: ActivatedRoute, private svc: DataService) {
+    this.applink = svc.applink + "/np/ntrhalk-295788714393704";
+
     if (this.route.queryParams) {
       this.route.queryParams.subscribe(params => {
-        let value = params["amount"];
-        if (value) {
-          this.amount = value;
+        let paymentType = params["paymentType"];
+        if (paymentType) {
+
+          this.data.paymentType = paymentType;
+          switch (this.data.paymentType) {
+            case "manaapp":
+              this.data.paymentQRUrl = "https://manadevmaster.blob.core.windows.net/images/url.png";
+              this.data.amount = 50;
+              break;
+            case "promptpay":
+              this.data.paymentQRUrl = "https://manadevmaster.blob.core.windows.net/ppayqr/01b595c7-2181-4708-b405-4c99e82bf76a.png";
+              this.data.amount = 65;
+              break;
+            default:
+              break;
+          }
         }
       });
     }
@@ -55,7 +73,7 @@ export class PaymentQRPage implements OnInit {
         await Share.share({
           title: 'See cool stuff',
           text: 'Really awesome thing you need to see right meow',
-          url: `https://prototype-landing.azurewebsites.net/#/payment-qr?amount=${this.amount}`,
+          url: `${this.svc.shareUrl}/#/payment-qr?paymentType=${this.data.paymentType}`,
           dialogTitle: 'Share with buddies',
         });
 

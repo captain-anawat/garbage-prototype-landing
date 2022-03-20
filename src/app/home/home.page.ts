@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataService } from 'src/services/data.service';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,10 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  public applink: string;
+  
+  constructor(private svc: DataService) {
+    this.applink = svc.applink + "/np/ntrhalk-nomember";
+  }
 
 }
